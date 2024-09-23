@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ActorClassLibrary</name>
+    </assembly>
+    <members>
+        <member name="P:ActorClassLibrary.Actor.Name">
+            <summary>
+            Henter eller indstiller personens navn.
+            </summary>
+        </member>
+        <member name="P:ActorClassLibrary.Actor.Id">
+            <summary>
+            Henter eller indstiller personens ID.
+            </summary>
+        </member>
+        <member name="P:ActorClassLibrary.Actor.BirthYear">
+            <summary>
+            Henter eller indstiller personens fødselsår.
+            </summary>
+        </member>
+        <member name="M:ActorClassLibrary.Actor.ToString">
+            <summary>
+            Returnerer en streng, der repræsenterer personen.
+            </summary>
+            <returns>En streng, der indeholder navn, ID og fødselsår.</returns>
+        </member>
+        <member name="M:ActorClassLibrary.Actor.ValidateName">
+            <summary>
+            Validerer personens navn.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Kastes hvis navn er null.</exception>
+            <exception cref="T:System.ArgumentException">Kastes hvis navn har mindre end 4 tegn.</exception>
+        </member>
+        <member name="M:ActorClassLibrary.Actor.ValidateBirthYear">
+            <summary>
+            Validerer personens fødselsår.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">Kastes hvis fødselsår er tidligere end 1820.</exception>
+        </member>
+        <member name="M:ActorClassLibrary.Actor.Validate">
+            <summary>
+            Validerer personens navn og fødselsår.
+            </summary>
+        </member>
+        <member name="F:ActorClassLibrary.ActorRepository._actors">
+            <summary>
+            Privat liste over skuespillere.
+            </summary>
+        </member>
+        <member name="M:ActorClassLibrary.ActorRepository.GetAll">
+            <summary>
+            Henter alle skuespillere.
+            </summary>
+            <returns>En liste over alle skuespillere.</returns>
+        </member>
+        <member name="M:ActorClassLibrary.ActorRepository.GetById(System.Int32)">
+            <summary>
+            Henter en skuespiller ud fra et ID.
+            </summary>
+            <param name="id">ID'et på skuespilleren, der skal hentes.</param>
+            <returns>Skuespilleren med det angivne ID eller null, hvis ingen findes.</returns>
+        </member>
+        <member name="M:ActorClassLibrary.ActorRepository.Add(ActorClassLibrary.Actor)">
+            <summary>
+            Tilføjer en ny skuespiller til samlingen.
+            </summary>
+            <param name="actor">Den skuespiller, der skal tilføjes.</param>
+            <returns>Den tilføjede skuespiller.</returns>
+        </member>
+        <member name="M:ActorClassLibrary.ActorRepository.Delete(System.Int32)">
+            <summary>
+            Sletter en skuespiller baseret på ID.
+            </summary>
+            <param name="id">ID'et på skuespilleren, der skal slettes.</param>
+            <returns>Den slettede skuespiller eller null, hvis ingen findes.</returns>
+        </member>
+        <member name="M:ActorClassLibrary.ActorRepository.GetActors">
+            <summary>
+            Henter alle skuespillere.
+            </summary>
+            <returns>En liste over alle skuespillere.</returns>
+        </member>
+        <member name="M:ActorClassLibrary.ActorRepository.Update(System.Int32,ActorClassLibrary.Actor)">
+            <summary>
+            Opdaterer en eksisterende skuespiller.
+            </summary>
+            <param name="id">ID'et på skuespilleren, der skal opdateres.</param>
+            <param name="actor">Den nye skuespillerdata.</param>
+            <returns>Den opdaterede skuespiller eller null, hvis ingen findes.</returns>
+        </member>
+    </members>
+</doc>
